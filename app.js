@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+require("dotenv").config();
 // const date = require(__dirname + "/date.js");
 
 const app = express();
@@ -11,11 +12,14 @@ app.use(express.static("public"));
 
 // ------- mongoDB ------
 
-mongoose.connect("mongodb+srv://admin-robin:test-password@todo-xdyx3.mongodb.net/todolistDB", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-});
+mongoose.connect(
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@todo-xdyx3.mongodb.net/todolistDB`,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+    }
+);
 
 const itemsSchema = new mongoose.Schema({
     name: String,
