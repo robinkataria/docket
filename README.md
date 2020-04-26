@@ -1,8 +1,21 @@
 # Docket
-Docket 📝 is a ToDo-List built using Node.js and mongoDB.
 
+Docket 📝 is a cloud-enabled, mobile-ready, NodeJS and EJS powered Todo list.
+- Create independent todo lists.
+- Switch between existing lists.
+- Add/Delete items to the list.
+
+### Installation
+
+Docket requires [Node.js](https://nodejs.org/) v4+ to run.
+
+Install the dependencies and start the server.
+
+> How?
 1. Clone or download https://github.com/robinkataria/docket.git
 2. Open cmd/Bash/Powershell
-2.1 cd project-Directory
-2.2 npm install
-2.3 node app.js 
+3. cd project-Directory 
+4.  ```sh
+    $ npm install -d
+    $ node app.js
+    ```
