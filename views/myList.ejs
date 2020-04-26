@@ -1,0 +1,55 @@
+<%- include("partials/header") -%>
+
+<!-- HEADING (List Title) -->
+<div class="box" id="heading">
+    <h1><%= listTitle %></h1>
+</div>
+
+<div class="box">
+    <!-- CHECKBOX (Deletion of List item), Item Display -->
+    <% listOfItems.forEach((item) => { %>
+    <form action="/delete" method="POST">
+        <div class="item">
+            <input
+                type="checkbox"
+                name="checkbox"
+                value="<%=item._id%>"
+                onChange="this.form.submit()"
+            />
+            <p><%= item.name %></p>
+            <input type="hidden" name="listName" value="<%=listTitle%>" />
+        </div>
+    </form>
+    <% }); %>
+
+    <!-- New item INPUT, Submit BUTTON -->
+    <form action="/" method="POST" class="item">
+        <input
+            type="text"
+            name="newItem"
+            placeholder="New Item"
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'New Item'"
+            autocomplete="off"
+            autofocus="autofocus"
+        />
+        <button type="submit" name="list" value="<%= listTitle %>">＋</button>
+    </form>
+</div>
+
+<br />
+<div class="box" id="switchBox">
+    <form action="/temp" method="POST">
+        <input
+            type="text"
+            name="freshList"
+            autocomplete="off"
+            placeholder="Switch New List"
+            onfocus="this.placeholder = 'title of your list...'"
+            onblur="this.placeholder = 'Switch New List'"
+        />
+        <button class="switchBtn" type="submit" name="freshListButton">＋</button>
+    </form>
+</div>
+
+<%- include("partials/footer") -%>
