@@ -32,14 +32,14 @@ Install the dependencies and start the server.
 2. Install Heroku CLI
 3. Track your codebase in a git repository
     ```sh
-    git init
-    git add .
-    git commit -m "Initial commit"
+    $ git init
+    $ git add .
+    $ git commit -m "Initial commit"
     ```
 4. Add a heroku git remote
     ```sh
-    heroku login
-    heroku create
+    $ heroku login
+    $ heroku create
     ```
 5. Add a Procfile (No need in this project)
     ```sh
@@ -53,19 +53,19 @@ Install the dependencies and start the server.
     - A managed object storage service (such as Amazon S3)
 7. Deploy your app
     ```sh
-    git push heroku master
+    $ git push heroku master
     ```
 8. Managing config vars(.env)
     - View current config var values
     ```sh
-    heroku config
-    heroku config:get GITHUB_USERNAME
+    $ heroku config
+    $ heroku config:get GITHUB_USERNAME
     ```
     - Set a config var
     ```sh
-    heroku config:set GITHUB_USERNAME=joesmith
+    $ heroku config:set GITHUB_USERNAME=joesmith
     ```
     - Remove a config var
     ```sh
-    heroku config:unset GITHUB_USERNAME
+    $ heroku config:unset GITHUB_USERNAME
     ```
