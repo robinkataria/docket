@@ -35,7 +35,7 @@ h1 {
     min-height: 70px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 2px solid red;
 }
 
 .item:last-child {
@@ -118,4 +118,13 @@ footer {
     color: white;
     color: rgba(0, 0, 0, 0.911);
     text-align: center;
+}
+
+.footer a {
+    color: #002658;
+}
+
+.footer a:hover {
+    color: #0146a0;
+    text-decoration: none;
 }
