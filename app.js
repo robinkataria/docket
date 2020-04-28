@@ -13,7 +13,7 @@ app.use(express.static("public"));
 // ------- mongoDB ------
 
 mongoose.connect(
-    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@todo-xdyx3.mongodb.net/todolistDB`,
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@projectsdb-xdyx3.mongodb.net/todolistDB`,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
